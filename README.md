@@ -8,7 +8,7 @@ Built for developers, job seekers, and platforms looking to automate resume pers
 
 ## 🚀 Key Features
 
-✅ Upload resume in **LaTeX or PDF**
+✅ Upload resume in **LaTeX**
 ✅ Paste any **Job Description**
 ✅ Generates a **tailored, ATS-friendly** resume
 ✅ Ensures **keyword matching** & **skill alignment**
@@ -20,7 +20,7 @@ Built for developers, job seekers, and platforms looking to automate resume pers
 
 ## 🧠 How It Works
 
-1. User uploads a resume
+1. User uploads a resume(latex)
 2. User enters a job description
 3. Backend parses the resume
 4. A structured, context-rich prompt is sent to OpenAI
