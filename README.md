@@ -110,7 +110,3 @@ axios.post("/tailor", formData);
 ✨ User profile + template library
 
 ---
-
-## 📝 License
-
-MIT License
