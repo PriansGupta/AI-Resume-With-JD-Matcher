@@ -1,0 +1,261 @@
+\textbackslash documentclass{[}letterpaper,11pt{]}\{article\}
+
+\textbackslash usepackage\{latexsym\}
+\textbackslash usepackage{[}empty{]}\{fullpage\}
+\textbackslash usepackage\{titlesec\}
+\textbackslash usepackage\{marvosym\}
+\textbackslash usepackage{[}usenames,dvipsnames{]}\{color\}
+\textbackslash usepackage\{verbatim\}
+\textbackslash usepackage\{enumitem\}
+\textbackslash usepackage{[}colorlinks = true, linkcolor = red, urlcolor
+= blue, citecolor = blue, anchorcolor = blue{]}\{hyperref\}
+\textbackslash usepackage\{fancyhdr\}
+\textbackslash usepackage{[}english{]}\{babel\}
+\textbackslash usepackage\{tabularx\}
+\textbackslash usepackage\{fontawesome5\}
+\textbackslash usepackage\{multicol\}
+\textbackslash setlength\{\textbackslash multicolsep\}\{-3.0pt\}
+\textbackslash setlength\{\textbackslash columnsep\}\{-1pt\}
+\textbackslash input\{glyphtounicode\}
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-FONT OPTIONS-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\% sans-serif \% \textbackslash usepackage{[}sfdefault{]}\{FiraSans\} \%
+\textbackslash usepackage{[}sfdefault{]}\{roboto\} \%
+\textbackslash usepackage{[}sfdefault{]}\{noto-sans\} \%
+\textbackslash usepackage{[}default{]}\{sourcesanspro\}
+
+\% serif \% \textbackslash usepackage\{CormorantGaramond\} \%
+\textbackslash usepackage\{charter\}
+
+\textbackslash hypersetup\{pdfborder = 0 0 0\}
+\textbackslash pagestyle\{fancy\} \textbackslash fancyhf\{\} \% clear
+all header and footer fields \textbackslash fancyfoot\{\}
+\textbackslash renewcommand\{\textbackslash headrulewidth\}\{0pt\}
+\textbackslash renewcommand\{\textbackslash footrulewidth\}\{0pt\}
+
+\% Adjust margins
+\textbackslash addtolength\{\textbackslash oddsidemargin\}\{-0.6in\}
+\textbackslash addtolength\{\textbackslash evensidemargin\}\{-0.5in\}
+\textbackslash addtolength\{\textbackslash textwidth\}\{0.8in\}
+\textbackslash addtolength\{\textbackslash topmargin\}\{-.7in\}
+\textbackslash addtolength\{\textbackslash textheight\}\{4in\}
+
+\textbackslash urlstyle\{same\}
+
+\textbackslash raggedbottom \textbackslash raggedright
+\textbackslash setlength\{\textbackslash tabcolsep\}\{0in\}
+
+\% Sections formatting
+\textbackslash titleformat\{\textbackslash section\}\{
+\textbackslash vspace\{-4pt\}\textbackslash scshape\textbackslash raggedright\textbackslash large\textbackslash bfseries
+\}\{\}\{0em\}\{\}{[}\textbackslash color\{black\}\textbackslash titlerule
+\textbackslash vspace\{-5pt\}{]}
+
+\% Ensure that generate pdf is machine readable/ATS parsable
+\textbackslash pdfgentounicode=1
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\% Custom commands
+\textbackslash newcommand\{\textbackslash resumeItem\}{[}1{]}\{
+\textbackslash item\textbackslash small\{ \{\#1
+\textbackslash vspace\{-2pt\}\} \} \}
+
+\textbackslash newcommand\{\textbackslash classesList\}{[}4{]}\{
+\textbackslash item\textbackslash small\{ \{\#1 \#2 \#3 \#4
+\textbackslash vspace\{-2pt\}\} \} \}
+
+\textbackslash newcommand\{\textbackslash resumeSubheading\}{[}4{]}\{
+\textbackslash vspace\{-2pt\}\textbackslash item
+\textbackslash begin\{tabular*\}\{1.0\textbackslash textwidth\}{[}t{]}\{l@\{\textbackslash extracolsep\{\textbackslash fill\}\}r\}
+\textbackslash textbf\{\#1\} \&
+\textbackslash textbf\{\textbackslash small \#2\}
+\textbackslash\textbackslash{}
+\textbackslash textit\{\textbackslash small\#3\} \&
+\textbackslash textit\{\textbackslash small \#4\}
+\textbackslash\textbackslash{}
+\textbackslash end\{tabular*\}\textbackslash vspace\{-7pt\} \}
+
+\textbackslash newcommand\{\textbackslash resumeSubSubheading\}{[}2{]}\{
+\textbackslash item
+\textbackslash begin\{tabular*\}\{0.97\textbackslash textwidth\}\{l@\{\textbackslash extracolsep\{\textbackslash fill\}\}r\}
+\textbackslash textit\{\textbackslash small\#1\} \&
+\textbackslash textit\{\textbackslash small \#2\}
+\textbackslash\textbackslash{}
+\textbackslash end\{tabular*\}\textbackslash vspace\{-7pt\} \}
+
+\textbackslash newcommand\{\textbackslash resumeProjectHeading\}{[}2{]}\{
+\textbackslash item
+\textbackslash begin\{tabular*\}\{1.001\textbackslash textwidth\}\{l@\{\textbackslash extracolsep\{\textbackslash fill\}\}r\}
+\textbackslash small\#1 \& \textbackslash textbf\{\textbackslash small
+\#2\}\textbackslash\textbackslash{}
+\textbackslash end\{tabular*\}\textbackslash vspace\{-7pt\} \}
+
+\textbackslash newcommand\{\textbackslash resumeSubItem\}{[}1{]}\{\textbackslash resumeItem\{\#1\}\textbackslash vspace\{-4pt\}\}
+
+\textbackslash renewcommand\textbackslash labelitemi\{\$\textbackslash vcenter\{\textbackslash hbox\{\textbackslash tiny\$\textbackslash bullet\$\}\}\$\}
+\textbackslash renewcommand\textbackslash labelitemii\{\$\textbackslash vcenter\{\textbackslash hbox\{\textbackslash tiny\$\textbackslash bullet\$\}\}\$\}
+
+\textbackslash newcommand\{\textbackslash resumeSubHeadingListStart\}\{\textbackslash begin\{itemize\}{[}leftmargin=0.0in,
+label=\{\}{]}\}
+\textbackslash newcommand\{\textbackslash resumeSubHeadingListEnd\}\{\textbackslash end\{itemize\}\}
+\textbackslash newcommand\{\textbackslash resumeItemListStart\}\{\textbackslash begin\{itemize\}\}
+\textbackslash newcommand\{\textbackslash resumeItemListEnd\}\{\textbackslash end\{itemize\}\textbackslash vspace\{-5pt\}\}
+\textbackslash begin\{document\}
+
+\textbackslash begin\{center\} \{\textbackslash Huge
+\textbackslash scshape Priyansh Gupta \} \textbackslash\textbackslash{}
+\textbackslash vspace\{1pt\} \textbackslash small
+\textbackslash raisebox\{-0.1\textbackslash height\}\textbackslash faPhone\textbackslash{}
++91-8423364688 \textasciitilde{}
+\textbackslash href\{mailto:priyanshgupta1009@gmail.com\}\{\textbackslash faEnvelope\textbackslash{}
+piyanshgupta1009@gmail.com\} \textasciitilde{}
+\textbackslash href\{https://linkedin.com/in/PriansGupta\}\{\textbackslash faLinkedin\textbackslash{}
+Linkedin\} \textasciitilde{}
+\textbackslash href\{https://github.com/PriansGupta\}\{\textbackslash faGithub\textbackslash{}
+GitHub\} \textasciitilde{} \textbackslash vspace\{-10pt\}
+\textbackslash end\{center\}
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-Summary-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+
+\textbackslash section\{Professional Summary\}
+\textbackslash resumeSubHeadingListStart \textbackslash resumeItem
+\{Full Stack Developer with a B.Tech in Electronics Engineering (HBTU,
+2024) and experience building scalable web apps using React, Next.js,
+and ASP.NET. Skilled in delivering performant UIs and robust APIs for
+300,000+ users, with a strong foundation in DSA (1500+ problems solved).
+Seeking impactful product-based roles to solve challenging engineering
+problems at scale\} \textbackslash resumeSubHeadingListEnd
+\textbackslash vspace\{-15pt\}
+
+\%
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-EDUCATION-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\% \textbackslash section\{Education\} \%
+\textbackslash resumeSubHeadingListStart \%
+\textbackslash resumeSubheading \% \{Harcourt Butler Technical
+University, Kanpur\}\{Dec 2020 -\/- May 2024\} \% \{Bachelor of
+Technology \}\{\} \% \textbackslash vspace\{-3pt\} \%
+\textbackslash resumeSubHeadingListEnd \% \textbackslash vspace\{-16pt\}
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-Technical
+Skilss-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/- \textbackslash section\{Skills\}
+\textbackslash begin\{itemize\}{[}leftmargin=0.1in, label=\{\}{]}
+\textbackslash small\{\textbackslash item\{
+\textbackslash textbf\{Frontend\}\{: ReactJs, NextJs,
+Tailwind\}\textbar{} \textbackslash textbf\{Backend\}\{: ASP.NET,
+NodeJs, Express\}\textbar{} \textbackslash textbf\{Database\}\{:
+MongoDB, MySQL, Redis\}\textbar{} \textbackslash textbf\{Tools\}\{: Git,
+Jira, Postman, Firebase, Bitbucket\}\textbar{}
+\textbackslash textbf\{Others\}\{: JWT, REST APIs, CI/CD, Agile, C++,
+C\textbackslash\#, System Design Concepts\} \}\}
+\textbackslash end\{itemize\} \textbackslash vspace\{-15pt\}
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-EXPERIENCE-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\textbackslash section\{Work Experience\}
+\textbackslash resumeSubHeadingListStart \textbackslash resumeSubheading
+\{\{ Tata Consultancy Services - \textbackslash textit\{Software
+Engineer (PRIME)\}\} \}\{July 2024 -\/- Present\} \{\}\{\}
+\textbackslash vspace\{-15pt\} \textbackslash resumeItemListStart
+\textbackslash resumeItem \{\textbackslash textbf\{Engineered and
+optimized\} a high-traffic loan application for a major US bank,
+enhancing performance and \textbackslash textbf\{reducing load times
+drastically \}leading to a smoother user experience.\}
+\textbackslash resumeItem \{Restructured
+\textbackslash textbf\{scalable\} \textbackslash textbf\{RESTful APIs
+\}using \textbackslash textbf\{ASP.NET\} and seamlessly integrated them
+with a ReactJS frontend, resulting in a faster response time and
+smoother interactions for 300,000+ active users\}
+\textbackslash resumeItem \{Contributed to key feature development in
+Agile 10-day sprints, actively raising PRs, participating in code
+reviews, and ensuring smooth deployments through robust CI/CD
+pipelines\} \textbackslash resumeItem\{Facilitated bi-weekly
+cross-functional meetings with product, design, and marketing teams,
+incorporating user feedback from \textbackslash textbf\{300,000+ active
+users\} to inform key feature development and improve app engagement.\}
+\textbackslash resumeItemListEnd \textbackslash vspace\{-4pt\}
+\textbackslash resumeSubheading \{\{Langoor Digital Pvt Ltd -
+\textbackslash textit\{Full Stack Developer Intern\}\} \}\{July 2023
+-\/- January 2024\} \{\}\{\} \textbackslash vspace\{-15pt\}
+\textbackslash resumeItemListStart \textbackslash resumeItem \{Developed
+a web application for \textbackslash textbf\{Unilever\} serving
+\textbackslash textbf\{100,000+ users in Canada\}, using Next.js for
+server-side routing and ensuring consistency with
+\textbackslash textbf\{Android and iOS\}\} \textbackslash resumeItem
+\{Utilized \textbackslash textbf\{Tailwind CSS\} for the front-end
+design for rapid feature implementation\} \textbackslash resumeItem
+\{Integrated \textbackslash textbf\{APIs\} into the front end,
+rigorously testing them with\textbackslash textbf\{ Postman\}\}
+\textbackslash resumeItem \{Utilized \textbackslash textbf\{Jira\} for
+task management, implementing a \textbackslash textbf\{Kanban board\}
+for \textbackslash textbf\{Agile\} software development.Managed version
+control with \textbackslash textbf\{Bitbucket\}, and actively
+participated in design/code reviews and ensuring code quality\}
+
+\textbackslash resumeItemListEnd \textbackslash vspace\{-4pt\}
+\textbackslash resumeSubheading \{\{ Freelance Web Developer -
+\textbackslash textit\{Upwork\}\}\}\{Dec 2022 -\/- Feb 2023\} \{\}\{\}
+\textbackslash vspace\{-15pt\} \textbackslash resumeItemListStart
+\textbackslash resumeItem\{Developed a simple UI-based web application
+for a small cake shop client to display and organize informational
+content about their products and services using
+\textbackslash textbf\{React.js\} and
+\textbackslash textbf\{Bootstrap\}\} \textbackslash resumeItem\{Built
+reusable components and responsive layouts to ensure cross-device
+compatibility\} \textbackslash resumeItem\{Managed the entire
+development life cycle from initial discussion to deployment using Git
+and Netlify\} \textbackslash resumeItemListEnd
+\textbackslash vspace\{-4pt\} \textbackslash resumeSubheading \{\{
+Blokminers - \textbackslash textit\{Full Stack Developer
+Intern\}\}\}\{May 2022 -\/- July 2022\} \{\}\{\}
+\textbackslash vspace\{-15pt\} \textbackslash resumeItemListStart
+\textbackslash resumeItem \{Built a responsive user interfaces using
+\textbackslash textbf\{ReactJS\}, enhancing user interaction and
+experience\} \textbackslash resumeItem \{Implemented custom styling with
+\textbackslash textbf\{Tailwind CSS\}, achieving a consistent and modern
+UI across the application. Worked collaboratively in a
+\textbackslash textbf\{team environment\} to deliver high-quality
+software\} \textbackslash resumeItemListEnd
+\textbackslash resumeSubHeadingListEnd \textbackslash vspace\{-15pt\} \%
+adjust vscape based on the space you want to leave between each section.
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-PROJECTS-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\textbackslash section\{Applications Built\}
+\textbackslash vspace\{-6pt\} \textbackslash resumeSubHeadingListStart
+\textbackslash resumeProjectHeading \{\textbackslash textbf
+\{\textbackslash href\{https://hbtu-inventory.vercel.app\}\{College
+Inventory\}\} \$\textbar\$ \textbackslash emph\{ NextJs, NodeJs,
+Express, MongoDB, SanityIO, Tailwind CSS\}\}\{\}
+\textbackslash resumeItemListStart \textbackslash resumeItem\{Developed
+a secure login system using JWT authentication, ensuring
+\textbackslash textbf\{100\textbackslash\% data integrity\} for 1,000+
+students and faculty users.\} \textbackslash resumeItem\{ Integrated
+\textbackslash textbf\{Sanity (CMS)\} for department-specific data
+empowering admin to search, add items efficiently to a cart, and
+initiate procurement processes\} \textbackslash resumeItem\{Automated
+\textbackslash textbf\{email notifications\} for checkouts using
+\textbackslash textbf\{Nodemailer\}, and centralized order history with
+alerts and contact feature for flexible administration and efficient
+user communication\} \textbackslash resumeSubHeadingListEnd
+\textbackslash vspace\{-15pt\} \% adjust vscape based on the space you
+want to leave between each section.
+
+\%-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-PROJECTS-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-
+\textbackslash section\{Achievements and Awards\}
+\textbackslash vspace\{-6pt\} \textbackslash resumeItemListStart
+\textbackslash resumeItem \{ Demonstrated competitive programming
+proficiency by achieving 3 Star
+\textbackslash href\{https://www.codechef.com/users/nikh\_prians\}\{\textbackslash textbf\{CodeChef\}\}
+\textbackslash textbf\{(1740 - Rated)\}, Pupil on
+\textbackslash href\{https://codeforces.com/profile/nikh\_prians\}\{\textbackslash textbf\{Codeforces\}\}
+\textbackslash textbf\{(1259 - Rated)\}\{,\} \textbackslash textbf\{
+\textbackslash href\{https://leetcode.com/Mag\_nus/\}\{Leetcode\} (1796
+- Top 7.5\{\textbackslash\%\} among 0.3 million+ coders) \} and 6 Star
+on
+\textbackslash href\{https://www.hackerrank.com/profile/nikh\_prians\}\{\textbackslash textbf\{HackerRank\}\}\}
+\textbackslash resumeItem \{Solved \textbackslash textbf\{1500+ DSA
+questions\} on CodeForces, Codechef, Leetcode, GeeksForGeeks\}
+\textbackslash resumeItem \{Google
+\textbackslash href\{https://drive.google.com/file/d/1qFDejXc7UhWTDa34dkY0TY0nhKWy-S7q/view\}\{\textbackslash textbf\{Kickstart\}\}
+Global Rank: 3032 and Newton School-CodeRush March Edition:
+\textbackslash textbf\{\textbackslash href\{https://drive.google.com/file/d/13jdc86Jv1ClxCpG84-rcgiXdqE7X3UNC/view\}\{Rank
+- 86\}\}\} \textbackslash resumeSubHeadingListEnd
+\textbackslash end\{document\}
